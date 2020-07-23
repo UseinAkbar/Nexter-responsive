@@ -1,0 +1,212 @@
+.topbar {
+  background-color: $color-secondary;
+  grid-column: full-start / full-end;
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5.6rem;
+  z-index: 5;
+  box-shadow: 0 .1rem .2rem #000;
+
+  @media only screen and (max-width: $bp-largest) {
+    height: 6rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: min-content 1fr min-content;
+    justify-items: center;
+  }
+
+  &__img {
+    height: 3rem;
+    transform: translateX(8rem);
+
+    @media only screen and (max-width: $bp-small) {
+      transform: translateX(0);
+    }
+  }
+
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    height: 100%;
+
+    @media only screen and (max-width: $bp-small) {
+      display: none;
+    }
+  }
+
+  &__item {
+    list-style: none;
+    height: 100%;
+    transition: .1s, transform .05s ease-out;
+
+    &:hover {
+      .topbar__link .topbar__icon {
+        fill: $color-grey-light-1;
+        filter: drop-shadow(0 0 1px whitesmoke);
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+
+        @media only screen and (max-width: $bp-medium) {
+          visibility: hidden;
+        }
+
+        &--login {
+          visibility: visible;
+        }
+
+      }
+
+      .topbar__link p {
+        transform: translateY(0);
+
+        @media only screen and (max-width: $bp-medium) {
+          transform: translateY(0);
+        }
+      }
+
+      .topbar__link .topbar__text-login {
+        @media only screen and (max-width: $bp-medium) {
+          transform: translateY(0);
+        }
+      }
+    }
+
+    &:not(:last-child) p {
+      transform: translateY(-50%);
+      @media only screen and (max-width: $bp-medium) {
+        transform: translateY(0);
+        align-self: center;
+      }
+    }
+
+    &:not(:last-child) .topbar__link .topbar__icon {
+      @media only screen and (max-width: $bp-medium) {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      border-left: 2px solid $color-primary-dark;
+
+      .topbar__link {
+        @media only screen and (max-width: $bp-medium) {
+          grid-auto-flow: column;
+          grid-auto-columns: max-content;
+          justify-content: center;
+          grid-gap: 5px;
+        }
+
+        .topbar__icon--login, .topbar__text-login {
+          @media only screen and (max-width: $bp-medium) {
+            align-self: center;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      background-color: $color-primary-dark;
+
+      .topbar__link {
+        color: $color-grey-light-1;
+      }
+    }
+
+    &:active {
+      transform: scale(.93);
+    }
+  }
+
+  &__icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: $color-primary;
+    margin-bottom: 2px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50%);
+    align-self: end;
+    transition: .2s ease-out, opacity .1s, filter 0s, fill 0s;
+
+    &--login {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  &__link,
+  &__link:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $font-display;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: $color-primary;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-gap: 1.5px;
+
+    p {
+      align-self: start;
+      transition: .2s ease-out;
+    }
+  }
+}
+
+.nav-btn {
+  border-radius: 0;
+  display: inline-block;
+  position: relative;
+  background-color: $color-grey-light-1;
+  height: 2px;
+  width: 3rem;
+  transform: translateX(3rem);
+  cursor: pointer;
+
+  @media only screen and (min-width: $bp-small) {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+  }
+
+  &::before {
+    top: -1rem;
+    left: 0;
+  }
+  &::after {
+    top: 1rem;
+    left: 0;
+  }
+}
+
+.search-btn {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  fill: $color-grey-light-1;
+  transform: translateX(-3rem);
+
+  @media only screen and (min-width: $bp-small) {
+    display: none;
+  }
+}

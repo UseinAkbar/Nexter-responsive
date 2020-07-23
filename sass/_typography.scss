@@ -1,0 +1,79 @@
+@mixin heading {
+  font-family: $font-display;
+  font-weight: 400;
+}
+
+.heading-1 {
+  @include heading;
+  font-size: 4.6rem;
+  color: $color-grey-light-1;
+  line-height: 1.2;
+  text-transform: capitalize;
+  align-self: center;
+  letter-spacing: 2.4px;
+}
+
+.heading-2 {
+  @include heading;
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1.2;
+
+  &--dark-h2 {
+    color: $color-grey-dark-1;
+  }
+
+  &--light {
+    color: $color-grey-light-1;
+  }
+
+}
+
+.heading-3 {
+  @include heading;
+  font-size: 1.6rem;
+  color: $color-primary;
+  text-transform: uppercase;
+  transform: translateY(1.5rem);
+}
+
+.heading-4 {
+  @include heading;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+
+  &--dark {
+    color: $color-primary;
+  }
+
+  &--light {
+    color: $color-grey-light-1;
+  }
+}
+
+.btn,
+.btn:visited {
+  background-color: $color-primary;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  font-family: $font-display;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 1.8rem 3rem;
+  cursor: pointer;
+  box-shadow: 1px 1.5px .2rem $color-grey-light-2;
+  border-radius: .5rem;
+  transform: scale(1);
+  transition: background-color .2s, transform .03s ease-out;
+
+  &:hover {
+    background-color: $color-primary-dark;
+  }
+
+  &:active {
+    transform: scale(.95);
+  }
+}
