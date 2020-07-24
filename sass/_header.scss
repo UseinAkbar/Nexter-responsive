@@ -27,6 +27,11 @@
     justify-self: start;
     align-self: start;
     transform: translateY(-1rem);
+    box-shadow: 1px 1.5px 0.1rem $color-grey-light-2;
+
+    @media only screen and (max-width: $bp-small) {
+      background-color: $color-primary-dark;
+    }
 
     &:active {
       transform: translateY(-1rem) scale(.95);

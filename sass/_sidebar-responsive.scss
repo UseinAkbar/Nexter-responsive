@@ -1,5 +1,5 @@
 .sidebar {
-  width: 60vw;
+  width: 70vw;
   height: 100vh;
   position: fixed;
   background-color: $color-secondary;
@@ -13,8 +13,12 @@
   z-index: 10;
   opacity: 0;
   transform: translateX(-100%);
-  box-shadow: 0.4rem 0 0.4rem rgba(#000, .5);
+  box-shadow: 0.4rem 0 0.6rem rgba(#000, .4);
   transition: .3s ease;
+
+  @media only screen and (min-width: $bp-xtraSmall) and (max-width: $bp-small){
+    grid-gap: 6rem;
+  }
 
   &__back {
     position: fixed;
@@ -68,9 +72,14 @@
       grid-gap: 2px;
 
       .user-name {
+        font-size: 1.8rem;
         display: grid;
         grid-template-columns: repeat(2, max-content);
         grid-column-gap: 5px;
+
+        @media only screen and (min-width: $bp-xtraSmall) {
+          font-size: 2.1rem;
+        }
 
         &::after {
           content: '';
@@ -84,6 +93,10 @@
         font-size: 1rem;
         color: rgba(#fff, .4);
         font-style: italic;
+
+        @media only screen and (min-width: $bp-xtraSmall) {
+          font-size: 1.4rem;
+        }
       }
     }
 
@@ -118,8 +131,8 @@
     height: 100%;
 
     &:not(:last-child) {
-      border-bottom: 1px solid $color-primary-dark;
-      padding-bottom: 4px;
+      border-bottom: 1px solid rgba($color-primary-dark, .8);
+      padding-bottom: 1rem;
     }
   }
 
@@ -127,7 +140,12 @@
     width: 1.8rem;
     height: 1.8rem;
     fill: $color-primary-dark;
-    transform: translateY(-15%);
+    transform: translateY(-12%);
+
+    @media only screen and (min-width: $bp-xtraSmall) {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 
   &__link,
@@ -135,7 +153,7 @@
     display: inline-block;
     text-decoration: none;
     font-family: $font-display;
-    font-size: 2rem;
+    font-size: 2.1rem;
     font-weight: 300;
     color: $color-grey-light-1;
     width: 100%;
@@ -148,15 +166,18 @@
     // justify-items: center;
     // align-items: center;
     // grid-gap: 1.5px;
+
+    @media only screen and (min-width: $bp-xtraSmall) {
+      font-size: 2.5rem;
+    }
   }
 
   &__copyright {
     display: inline-block;
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.2);
+    color: rgba(#fff, 0.15);
     text-align: center;
     width: 100%;
-    transform: translateY(400%);
   }
 }
 
@@ -169,16 +190,16 @@
 
 .close-btn {
   display: inline-block;
-  width: 3.4rem;
-  height: 3.4rem;
+  width: 4rem;
+  height: 4rem;
   fill: $color-primary-dark;
   cursor: pointer;
 }
 
 .setting-btn {
   display: inline-block;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3rem;
+  height: 3rem;
   fill: $color-primary-dark;
   justify-self: end;
   cursor: pointer;

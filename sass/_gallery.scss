@@ -24,7 +24,7 @@
       box-shadow: 0 0 1rem rgba(#000, .5);
     }
 
-    @media only screen and (max-width: $bp-smallest) and (hover: none) {
+    @media only screen and (max-width: $bp-small) and (hover: none) {
       border-radius: 0;
       box-shadow: 0 0 .5rem rgba(#000, .2);
 
