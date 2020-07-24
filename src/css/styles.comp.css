@@ -131,7 +131,17 @@ body {
   @media only screen and (max-width: 37.5em) {
     .topbar {
       grid-template-columns: min-content 1fr min-content;
-      justify-items: center; } }
+      justify-items: center; }
+      .topbar.displayInput {
+        justify-items: center;
+        grid-gap: 3rem; } }
+  .topbar__close {
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    fill: #f9f7f6;
+    cursor: pointer;
+    transform: translateX(-3rem); }
   .topbar__img {
     height: 3.4rem;
     transform: translateX(8rem); }
@@ -258,6 +268,8 @@ body {
   height: 3rem;
   fill: #f9f7f6;
   transform: translateX(-3rem); }
+  .search-btn.close {
+    display: none; }
   @media only screen and (min-width: 37.5em) {
     .search-btn {
       display: none; } }
@@ -390,7 +402,7 @@ body {
     height: 100%;
     display: grid;
     grid-template-columns: min-content 1fr;
-    grid-gap: 4px;
+    grid-gap: .8rem;
     align-items: center; }
     @media only screen and (min-width: 22.5em) {
       .sidebar__link, .sidebar__link:active {
@@ -436,6 +448,43 @@ body {
 .sidebar__back-click {
   opacity: 1;
   visibility: visible; }
+
+.topbar__search {
+  transform: translateX(1rem);
+  display: none; }
+  .topbar__search-form {
+    display: inline-block;
+    display: grid;
+    grid-auto-flow: column; }
+  .topbar__search-input {
+    border: none;
+    outline: none;
+    font-family: "Josefin Sans", sans-serif;
+    color: #f9f7f6;
+    background-color: transparent;
+    border-bottom: 1px solid #B28451;
+    padding: 1rem;
+    padding-right: 4.5rem;
+    caret-color: #f9f7f6; }
+    .topbar__search-input::-webkit-input-placeholder {
+      color: #B28451;
+      font-size: 1.8rem;
+      font-weight: 400;
+      font-family: "Josefin Sans", sans-serif; }
+  .topbar__search-button {
+    display: inline-block;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    transform: translateX(-150%); }
+  .topbar__search-icon {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: #f9f7f6; }
+
+.display {
+  display: inline-block; }
 
 .header {
   background-image: linear-gradient(rgba(16, 29, 44, 0.8), rgba(16, 29, 44, 0.8)), url("../images/hero-2-small.jpeg");

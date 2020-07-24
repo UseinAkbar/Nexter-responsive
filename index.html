@@ -63,6 +63,21 @@
         </a>
       </li>
     </ul>
+
+    <div class="topbar__search">
+      <form class="topbar__search-form">
+        <input type="text" name="cityName" class="topbar__search-input" autocomplete="off" placeholder="Search a city">
+        <button type="button" name="button" class="topbar__search-button">
+          <svg class="topbar__search-icon">
+            <use xlink:href="src/images/sprite.svg#icon-magnifying-glass"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <svg class="topbar__close">
+      <use xlink:href="src/images/sprite.svg#icon-cross"></use>
+    </svg>
   </div>
 
   <div class="sidebar">
@@ -106,6 +121,14 @@
           </svg>
           Properties
         </a>
+      </li>
+      <li class="sidebar__item">
+        <a href="#" class="sidebar__link">
+        <svg class="sidebar__icon">
+          <use xlink:href="src/images/sprite.svg#icon-heart-full"></use>
+        </svg>
+        Favorites
+      </a>
       </li>
       <li class="sidebar__item">
         <a href="#" class="sidebar__link">
