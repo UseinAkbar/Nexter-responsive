@@ -23,14 +23,18 @@
     letter-spacing: 2px;
   }
 
-  &__btn {
+  &__btn,
+  &__btn:visited {
     justify-self: start;
     align-self: start;
     transform: translateY(-1rem);
     box-shadow: 1px 1.5px 0.1rem $color-grey-light-2;
 
-    @media only screen and (max-width: $bp-small) {
+    @media only screen and (max-width: $bp-small) and (hover: none) {
       background-color: $color-primary-dark;
+      &:hover {
+        background-color: $color-primary-dark;
+      }
     }
 
     &:active {

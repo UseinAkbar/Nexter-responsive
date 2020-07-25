@@ -73,6 +73,13 @@
     background-color: $color-primary-dark;
   }
 
+  @media only screen and (max-width: $bp-small) and (hover: none) {
+    background-color: $color-primary;
+    &:hover {
+      background-color: $color-primary;
+    }
+  }
+
   &:active {
     transform: scale(.95);
   }
