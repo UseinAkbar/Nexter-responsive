@@ -1,7 +1,9 @@
 .sidebar {
   width: 70vw;
-  height: 100vh;
+  height: calc(100vh - 7rem);
   position: fixed;
+  bottom: 0;
+  left: 0;
   background-color: $color-secondary;
   padding: 1rem 2rem;
   display: grid;
@@ -17,7 +19,7 @@
   transition: .3s ease;
 
   @media only screen and (min-width: $bp-xtraSmall) and (max-width: $bp-small){
-    grid-gap: 6rem;
+    grid-gap: 5rem;
   }
 
   &__back {
@@ -162,6 +164,7 @@
     grid-template-columns: min-content 1fr;
     grid-gap: .8rem;
     align-items: center;
+    -webkit-tap-highlight-color: transparent;
     // display: grid;
     // justify-items: center;
     // align-items: center;
@@ -194,6 +197,7 @@
   height: 4rem;
   fill: $color-primary-dark;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .setting-btn {

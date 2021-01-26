@@ -22,45 +22,42 @@ homeIcon.forEach((item, i) => {
 //TOGGLE SIDEBAR
 document.querySelector('.nav-btn').addEventListener('click', () => {
   //Display The Sidebar
-  if (sidebar.classList.length === 1 && sidebarBack.classList.length === 1) {
-    sidebar.classList.add('sidebar-click');
-    sidebarBack.classList.add('sidebar__back-click');
-  }
-
+    sidebar.classList.toggle('sidebar-click');
+    sidebarBack.classList.toggle('sidebar__back-click');
 });
 
 closeBtn.addEventListener('click', () => {
   //Hide The Sidebar
-  if (sidebar.classList.length !== 1 && sidebarBack.classList.length !== 1) {
-    sidebar.classList.remove('sidebar-click');
-    sidebarBack.classList.remove('sidebar__back-click');
-  }
+    sidebar.classList.toggle('sidebar-click');
+    sidebarBack.classList.toggle('sidebar__back-click');
 });
 
 sidebarBack.addEventListener('click', () => {
-  if (sidebar.classList.length !== 1) {
-    sidebar.classList.remove('sidebar-click');
-    sidebarBack.classList.remove('sidebar__back-click');
-  }
+    sidebar.classList.toggle('sidebar-click');
+    sidebarBack.classList.toggle('sidebar__back-click');
 });
 
 //DISPLAY THE SEARCH INPUT
 searchBtn.addEventListener('click', () => {
   if (topbarSearch.classList.length === 1) {
     topbarClose.style.display = 'inline-block';
-    topbar.classList.add('displayInput');
+    topbar.classList.toggle('displayInput');
     topbarImg.style.display = 'none';
-    searchBtn.classList.add('close');
-    topbarSearch.classList.add('display');
+    searchBtn.classList.toggle('close');
+    topbarSearch.classList.toggle('display');
   }
 });
 
 topbarClose.addEventListener('click', () => {
   if (topbar.classList.length !== 1) {
     topbarClose.style.display = 'none';
-    topbarSearch.classList.remove('display');
-    topbar.classList.remove('displayInput');
+    topbarSearch.classList.toggle('display');
+    topbar.classList.toggle('displayInput');
     topbarImg.style.display = 'inline-block';
-    searchBtn.classList.remove('close');
+    searchBtn.classList.toggle('close');
   }
+})
+
+document.querySelectorAll('.copyrightYear').forEach( item => {
+  item.textContent = new Date().getFullYear();
 })

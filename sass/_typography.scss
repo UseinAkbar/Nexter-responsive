@@ -67,6 +67,7 @@
   box-shadow: 1px 1.5px .2rem $color-grey-light-2;
   border-radius: .5rem;
   transform: scale(1);
+  -webkit-tap-highlight-color: transparent;
   transition: background-color .2s, transform .03s ease-out;
 
   &:hover {

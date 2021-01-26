@@ -8,7 +8,7 @@
   <meta name="description" content="Feel free of your choice.">
   <link rel="shortcut icon" type="image/png" href="src/images/favicon.png">
   <!-- Font -->
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i,400, 400i" rel="stylesheet">
   <!-- Fontawesome -->
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <!-- Aos -->
@@ -28,7 +28,7 @@
     </svg>
     <ul class="topbar__nav">
       <li class="topbar__item">
-        <a href="#" class="topbar__link">
+        <a href="#properties" class="topbar__link">
           <svg class="topbar__icon">
             <use xlink:href="src/images/sprite.svg#icon-home"></use>
           </svg>
@@ -37,7 +37,7 @@
       </li>
 
       <li class="topbar__item">
-        <a href="#" class="topbar__link">
+        <a href="#gallery" class="topbar__link">
           <svg class="topbar__icon">
             <use xlink:href="src/images/sprite.svg#icon-image-inverted"></use>
           </svg>
@@ -157,7 +157,7 @@
     </ul>
 
     <p class="sidebar__copyright">
-      &copy; copyright 2020 by Nexter.
+      &copy; copyright <span class="copyrightYear"></span> by Nexter.
     </p>
   </div>
 
@@ -222,7 +222,7 @@
       </svg>
       <h4 class="heading-4 heading-4--dark">World's best luxury homes</h4>
       <p class="feature__text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur voluptatibus.
+        Provide the best property for the comfort of you and your family
       </p>
     </div>
 
@@ -232,7 +232,7 @@
       </svg>
       <h4 class="heading-4 heading-4--dark">Only the best property</h4>
       <p class="feature__text">
-        Pariatur voluptatibus quidem consequatur harum, voluptatum mollitia quae.
+        The best property with a reliable realtors is prepared for you
       </p>
     </div>
 
@@ -240,9 +240,9 @@
       <svg class="feature__icon">
         <use xlink:href="src/images/sprite.svg#icon-map-pin"></use>
       </svg>
-      <h4 class="heading-4 heading-4--dark">strategy locations</h4>
+      <h4 class="heading-4 heading-4--dark">strategic locations</h4>
       <p class="feature__text">
-        Voluptatum mollitia quae. Vero ipsum sapiente molestias accusamus rerum sed a eligendi aut quia.
+        Our property is in a strategic location and easy to reach
       </p>
     </div>
 
@@ -252,7 +252,7 @@
       </svg>
       <h4 class="heading-4 heading-4--dark">Top 100% realtors</h4>
       <p class="feature__text">
-        Vero ipsum sapiente molestias accusamus rerum. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Trusted realtors to help make your dreams come true
       </p>
     </div>
 
@@ -262,7 +262,7 @@
       </svg>
       <h4 class="heading-4 heading-4--dark">New home in one week</h4>
       <p class="feature__text">
-        Tenetur distinctio necessitatibus pariatur voluptatibus quidem consequatur harum.
+        Fast administration management and guaranteed security
       </p>
     </div>
 
@@ -272,7 +272,7 @@
       </svg>
       <h4 class="heading-4 heading-4--dark">Secure payments on Nexter</h4>
       <p class="feature__text">
-        Quidem consequatur harum, voluptatum mollitia quae. Tenetur distinctio necessitatibus pariatur voluptatibus.
+        Secure payments under control without worrying about data security
       </p>
     </div>
   </section>
@@ -293,11 +293,11 @@
   <div class="story__content">
     <h3 class="heading-3 mb-sm">Happy customers,</h3>
     <h2 class="heading-2 heading-2--dark-h2 mb-sm">&ldquo;The best decision of our lives&rdquo;</h2>
-    <p class="story__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur voluptatibus. Quidem consequatur harum volupta!</p>
+    <p class="story__text">Extraordinary. We felt the difference after getting what we dreamed of through <strong>Nexter</strong>. People should know and feel what we feel. Good job <strong>Nexter</strong>!</p>
     <a href="#" class="btn">Find your own home</a>
   </div>
 
-  <section class="homes">
+  <section class="homes" id="properties">
     <div class="home">
       <div class="home__box">
         <img src="src/images/house-1.jpeg" alt="House 1" class="home__img">
@@ -511,7 +511,7 @@
       <a href="#" class="cta home__cta">See more &rarr;</a>
   </section>
 
-  <section class="gallery">
+  <section class="gallery" id="gallery">
     <figure class="gallery__item gallery__item--1"><img src="src/images/gal-1.jpeg" alt="Gallery image 1" class="gallery__img"></figure>
     <figure class="gallery__item gallery__item--2"><img src="src/images/gal-2.jpeg" alt="Gallery image 2" class="gallery__img"></figure>
     <figure class="gallery__item gallery__item--3"><img src="src/images/gal-3.jpeg" alt="Gallery image 3" class="gallery__img"></figure>
@@ -548,7 +548,7 @@
       <li class="nav__item"><a href="#" class="nav__link"><span>Submit</span> your property</a></li>
       <li class="nav__item"><a href="#" class="nav__link"><span>Come work</span> with us!</a></li>
     </ul>
-    <p class="copyright">&copy; Copyright 2020 by Nexter. All rights reserved.</p>
+    <p class="copyright">&copy; Copyright <span class="copyrightYear"></span> by Nexter. All rights reserved.</p>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
