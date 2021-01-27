@@ -1,9 +1,7 @@
 .sidebar {
   width: 70vw;
-  height: calc(100vh - 7rem);
+  height: 100vh;
   position: fixed;
-  bottom: 0;
-  left: 0;
   background-color: $color-secondary;
   padding: 1rem 2rem;
   display: grid;
