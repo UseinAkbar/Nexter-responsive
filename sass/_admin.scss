@@ -1,0 +1,61 @@
+.admin {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    font-family: $font-display;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        grid-gap: 4rem;
+        padding: 5rem 6rem;
+        background-image: linear-gradient(rgba($color-secondary, .8), rgba($color-secondary, .8)), url('/src/images/admin-jumbotron.jpg');
+        background-size: cover;
+    }
+
+    &__title {
+        font-size: 3.6rem;
+        font-weight: 600;
+        letter-spacing: 6px;
+        color: $color-primary-dark;
+    }
+
+    &__form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        grid-gap: 2rem;
+    }
+    
+    &__form-group {
+        width: 50%;
+
+        label {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: $color-grey-light-1;
+         }
+
+         input {
+            font-size: 1.4rem;
+            font-weight: 500;
+            padding: 1rem 1.5rem;
+         }
+
+         input::placeholder {
+            font-size: inherit;
+            font-weight: 400;
+            color: $color-grey-light-2;
+        }
+    }
+
+    &__btn {
+        width: 50%;
+    }
+}
+
+.footer__admin {
+    grid-column: unset;
+    grid-row: unset;
+}

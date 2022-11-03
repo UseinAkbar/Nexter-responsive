@@ -12,7 +12,9 @@
   <!-- Fontawesome -->
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <!-- Aos -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
   <!-- Native Style -->
   <link rel="stylesheet" href="src/css/styles.css">
 
@@ -54,14 +56,26 @@
         </a>
       </li>
 
-      <li class="topbar__item">
-        <a href="#" class="topbar__link">
+      <li class="topbar__item topbar__login">
+        <a href="./login.html" class="topbar__link">
           <svg class="topbar__icon topbar__icon--login">
             <use xlink:href="src/images/sprite.svg#icon-login"></use>
           </svg>
           <p class="topbar__text-login">Log in</p>
         </a>
       </li>
+
+      <!-- <li class="topbar__item topbar__logged">
+          <img src="/src/images/user.png" alt="">
+          <p class="topbar__user">Usein</p>
+          <div class="topbar__option">
+            <ul class="topbar__dropdown">
+              <li>Dashboard</li>
+              <li>Settings</li>
+              <li>Log out</li>
+            </ul>
+          </div>
+      </li> -->
     </ul>
 
     <div class="topbar__search">
@@ -330,7 +344,9 @@
         </svg>
         <p>$1,200,000</p>
       </div>
-      <a href="#" class="btn home__btn">Contact realtor</a>
+      <button type="button" class="btn home__btn" data-bs-toggle="modal" data-bs-target="#detailHouse">
+        Book Now
+      </button>
     </div>
 
     <div class="home">
@@ -365,7 +381,9 @@
         </svg>
         <p>$2,750,000</p>
       </div>
-      <a href="#" class="btn home__btn">Contact realtor</a>
+      <button type="button" class="btn home__btn" data-bs-toggle="modal" data-bs-target="#detailHouse">
+        Book Now
+      </button>
     </div>
 
     <div class="home">
@@ -400,7 +418,9 @@
         </svg>
         <p>$875,000</p>
       </div>
-      <a href="#" class="btn home__btn">Contact realtor</a>
+      <button type="button" class="btn home__btn" data-bs-toggle="modal" data-bs-target="#detailHouse">
+        Book Now
+      </button>
     </div>
 
     <div class="home">
@@ -435,7 +455,9 @@
         </svg>
         <p>$1,950,000</p>
       </div>
-      <a href="#" class="btn home__btn">Contact realtor</a>
+      <button type="button" class="btn home__btn" data-bs-toggle="modal" data-bs-target="#detailHouse">
+        Book Now
+      </button>
     </div>
 
     <div class="home">
@@ -470,7 +492,9 @@
         </svg>
         <p>$4,500,000</p>
       </div>
-      <a href="#" class="btn home__btn">Contact realtor</a>
+      <button type="button" class="btn home__btn" data-bs-toggle="modal" data-bs-target="#detailHouse">
+        Book Now
+      </button>
     </div>
 
     <div class="home">
@@ -505,10 +529,87 @@
         </svg>
         <p>$650,000</p>
       </div>
-      <a href="#" class="btn home__btn">Contact realtor</a>
+      <button type="button" class="btn home__btn" data-bs-toggle="modal" data-bs-target="#detailHouse">
+        Book Now
+      </button>
     </div>
 
       <a href="#" class="cta home__cta">See more &rarr;</a>
+  </section>
+
+    <!-- Button trigger modal
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailHouse">
+    Launch demo modal
+  </button> -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="detailHouse" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Beautiful Family House</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="src/images/house-1.jpeg" alt="House" class="house__img">
+          <div class="house__detail">
+            <div class="house__spec">
+              <div class="house__group">
+                <svg>
+                  <use xlink:href="src/images/sprite.svg#icon-map-pin"></use>
+                </svg>
+                <p class="house__location">France</p>
+              </div>
+              <div class="house__group">
+                <svg>
+                  <use xlink:href="src/images/sprite.svg#icon-profile-male"></use>
+                </svg>
+                <p class="house__rooms">3 rooms</p>
+              </div>
+              <div class="house__group">
+                <svg>
+                  <use xlink:href="src/images/sprite.svg#icon-expand"></use>
+                </svg>
+                <p class="house__land">180 m<sup>2</sup></p>
+              </div>
+              <div class="house__group">
+                <svg>
+                  <use xlink:href="src/images/sprite.svg#icon-key"></use>
+                </svg>
+                <p class="house__price">$650,000</p>
+              </div>
+            </div>
+            <div class="house__border"></div>
+            <div class="house__recommend">
+              <div class="progress house__progress">
+                <div class="progress-bar house__progress-bar" role="progressbar" aria-label="Example with label" style="width: 70%; height: 10px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+              </div>
+              <p class="house__text-recommend">70% users recommend this for you</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn house-btn-close" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn house-btn-book">Start Booking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <section class="footage">
+    <h1 class="footage__title">Our Profile</h1>
+    <div class="footage__video">
+      <video width="" height="400" autoplay loop>
+        <source src="/src/video/footage.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <section class="map">
+    <h1 class="map__title">Our office</h1>
+    <div class="map__container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52871.82171344441!2d-118.4345536353833!3d34.08261502202978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc04d6d147ab%3A0xd6c7c379fd081ed1!2sBeverly%20Hills%2C%20California%2C%20Amerika%20Serikat!5e0!3m2!1sid!2sid!4v1667290697781!5m2!1sid!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </section>
 
   <section class="gallery" id="gallery">
@@ -540,18 +641,28 @@
   </div>
 
   <footer class="footer">
-    <ul class="nav">
-      <li class="nav__item"><a href="#" class="nav__link"><span>Find your</span> dream home</a></li>
-      <li class="nav__item"><a href="#" class="nav__link"><span>Request</span> proposal</a></li>
-      <li class="nav__item"><a href="#" class="nav__link"><span>Download</span> home planner</a></li>
-      <li class="nav__item"><a href="#" class="nav__link"><span>Contact</span> us</a></li>
-      <li class="nav__item"><a href="#" class="nav__link"><span>Submit</span> your property</a></li>
-      <li class="nav__item"><a href="#" class="nav__link"><span>Come work</span> with us!</a></li>
+    <ul class="footer__nav">
+      <li class="footer__item"><a href="#" class="footer__link"><span>Find your</span> dream home</a></li>
+      <li class="footer__item"><a href="#" class="footer__link"><span>Request</span> proposal</a></li>
+      <li class="footer__item"><a href="#" class="footer__link"><span>Download</span> home planner</a></li>
+      <li class="footer__item"><a href="#" class="footer__link"><span>Contact</span> us</a></li>
+      <li class="footer__item"><a href="#" class="footer__link"><span>Submit</span> your property</a></li>
+      <li class="footer__item"><a href="#" class="footer__link"><span>Come work</span> with us!</a></li>
     </ul>
     <p class="copyright">&copy; Copyright <span class="copyrightYear"></span> by Nexter. All rights reserved.</p>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- <lord-icon
+    src="https://cdn.lordicon.com/dpinvufc.json"
+    trigger="loop"
+    colors="primary:#101d2c,secondary:#08a88a"
+    style="width:250px;height:250px">
+  </lord-icon> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://cdn.lordicon.com/qjzruarw.js"></script> -->
+  <script src="topbar.js"></script>
+  <script src="house.js" type="module"></script>
   <script src="index.js" charset="utf-8"></script>
 </body>
 

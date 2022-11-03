@@ -1,0 +1,128 @@
+.house {
+
+    &__img {
+        width: 100%;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        border-radius: 2px;
+    }
+
+    &__detail {
+        height: 50%;
+        align-self: end;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        grid-gap: 1rem;
+        align-content: end;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        z-index: 2;
+        padding: 0 2rem 2rem;
+        border-radius: 0 0 2px 2px;
+        background-image: linear-gradient(to top, $color-secondary 45%, transparent 90%, transparent);
+    }
+    
+    &__spec {
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__border {
+        height: .2px;
+        width: 100%;
+        border-radius: 2px;
+        opacity: .5;
+        background-color: $color-primary-dark;
+    }
+    
+    &__group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        svg {
+            fill: $color-primary-dark;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #c69963;
+            transform: translateY(2px);
+        }
+    }
+
+    &__recommend {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #c69963;
+            transform: translateY(2px);
+        }
+    }
+
+    &__progress {
+        width: 50%;
+    }
+
+    &__progress-bar {
+        background-color: $color-primary-dark;
+    }
+
+    &-btn-close,
+    &-btn-book {
+        padding: 1rem 2rem;
+    }
+
+    &-btn-close {
+        background-color: transparent;
+        color: #c69963;
+        border: 1px solid #c69963;
+        box-shadow: none;
+
+        &:hover,
+        &:active {
+            background-color: transparent !important;
+            color: #c69963 !important;
+            border: 1px solid #c69963;
+        }
+    }
+
+    &-btn-book {
+        margin-left: 1rem;
+    }
+}
+
+.modal-content {
+    padding: 2rem 1rem;
+}
+.modal-header,
+.modal-footer {
+    border: none;
+}
+
+.modal-title {
+    font-family: $font-display;
+    font-size: 2.4rem !important;
+    font-weight: 600;
+    color: $color-primary-dark;
+    letter-spacing: 1.5px;
+}
+
+.modal-body {
+    font-family: $font-display;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+}
+
+.btn-close {
+    display: none;
+}

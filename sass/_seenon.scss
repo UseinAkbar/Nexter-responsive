@@ -3,7 +3,7 @@
   background-color: $color-grey-light-1;
   display: grid;
   grid-column: full-start / full-end;
-  grid-row: 8/9;
+  grid-row: 10/11;
   grid-template-rows: 1fr 5rem;
 
   @media only screen and (max-width: $bp-medium) {

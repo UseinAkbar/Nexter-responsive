@@ -1,0 +1,184 @@
+.booking {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    font-family: $font-display;
+    
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: min-content;
+        grid-gap: 5rem;
+        padding: 5rem 6rem;
+    }
+
+    &__left,
+    &__right {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        grid-gap: 4rem;
+    }
+
+    &__right {
+        grid-gap: 2rem;
+    }
+
+    &__detail {
+        display: grid;
+        grid-template-columns: 70% max-content;
+        justify-content: space-between;
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 6px;
+            color: $color-primary-dark;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            img {
+                width: 2rem;
+            }
+        }
+    }
+
+    &__subtitle {
+        font-size: 2.4rem;
+        font-weight: 500;
+        letter-spacing: 4px;
+        color: $color-primary-dark;
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 2px;
+    }
+
+    &__facility,
+    &__realtor {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        grid-gap: 2rem;
+    }
+
+    &__group-container {
+        display: grid;
+        grid-template-columns: repeat(4, max-content);
+        grid-auto-rows: min-content;
+        grid-gap: 3rem;
+    }
+
+    &__group {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        svg {
+            fill: $color-primary;
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+
+        p {
+            font-size: 2rem;
+            font-weight: 400;
+            color: $color-primary;
+            transform: translateY(2px);
+        }
+    }
+
+    &__border {
+        width: 100%;
+        height: 1px;
+        background-color: $color-primary-dark;
+        border-radius: 2px;
+        opacity: .4;
+    }
+
+    &__realtor {
+
+    }
+
+    &__realtor-profile {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        img {
+            width: 6rem;
+            height: 6rem;
+            border-radius: 50%;
+        }
+
+        p {
+            font-size: 2rem;
+            font-weight: 400;
+            color: $color-primary;
+        }
+    }
+
+    &__form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        grid-gap: 2rem;
+    }
+
+    &__form-title {
+        font-size: 3rem;
+        font-weight: 600;
+        letter-spacing: 3px;
+        color: $color-primary-dark;
+    }
+
+    &__form-group {
+
+         label {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: $color-grey-dark-2;
+         }
+
+         input {
+            font-size: 1.4rem;
+            font-weight: 500;
+            padding: 1rem 1.5rem;
+         }
+
+         input::placeholder {
+            font-size: inherit;
+            font-weight: 400;
+            color: $color-grey-light-2;
+        }
+    }
+
+    &__credit-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: min-content;
+        grid-gap: 2rem;
+    }
+
+    &__card-payment {
+        justify-self: end;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        img {
+            width: 5rem;
+        }
+    }
+}
+
+.footer__booking {
+    grid-column: unset;
+    grid-row: unset;
+}

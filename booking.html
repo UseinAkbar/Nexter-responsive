@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="src/images/favicon.png">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i,400, 400i" rel="stylesheet">
+    <!-- Fontawesome -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Aos -->
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <!-- Native Style -->
+    <link rel="stylesheet" href="src/css/styles.css">
+    <title>Booking</title>
+</head>
+<body>
+    <div class="booking">
+        <div class="topbar">
+            <div class="nav-btn"></div>
+            <img src="src/images/logo.png" alt="Nexter logo" title="Nexter" class="topbar__img">
+            <svg class="search-btn">
+              <use xlink:href="src/images/sprite.svg#icon-magnifying-glass"></use>
+            </svg>
+            <ul class="topbar__nav">
+              <li class="topbar__item">
+                <a href="#properties" class="topbar__link">
+                  <svg class="topbar__icon">
+                    <use xlink:href="src/images/sprite.svg#icon-home"></use>
+                  </svg>
+                  <p>Properties</p>
+                </a>
+              </li>
+        
+              <li class="topbar__item">
+                <a href="#gallery" class="topbar__link">
+                  <svg class="topbar__icon">
+                    <use xlink:href="src/images/sprite.svg#icon-image-inverted"></use>
+                  </svg>
+                  <p>Gallery</p>
+                </a>
+              </li>
+        
+              <li class="topbar__item">
+                <a href="#" class="topbar__link">
+                  <svg class="topbar__icon">
+                    <use xlink:href="src/images/sprite.svg#icon-price-tag"></use>
+                  </svg>
+                  <p>Pricing</p>
+                </a>
+              </li>
+        
+              <li class="topbar__item topbar__logged">
+                  <img src="/src/images/user.png" alt="">
+                  <p class="topbar__user"></p>
+                  <div class="topbar__option drop">
+                    <ul class="topbar__dropdown">
+                      <li>Dashboard</li>
+                      <li>Settings</li>
+                      <li class="topbar__logout">Log out</li>
+                    </ul>
+                  </div>
+              </li>
+            </ul>
+        
+            <div class="topbar__search">
+              <form class="topbar__search-form">
+                <input type="text" name="cityName" class="topbar__search-input" autocomplete="off" placeholder="Search a city">
+                <button type="button" name="button" class="topbar__search-button">
+                  <svg class="topbar__search-icon">
+                    <use xlink:href="src/images/sprite.svg#icon-magnifying-glass"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+        
+            <svg class="topbar__close">
+              <use xlink:href="src/images/sprite.svg#icon-cross"></use>
+            </svg>
+        </div>
+        <div class="booking__container">
+            <div class="booking__left">
+                <img src="/src/images/house-1.jpeg" alt="House" class="booking__img">
+                <div class="booking__detail">
+                    <h1 class="booking__title">Beautiful Family House</h1>
+                    <div>
+                        <img src="/src/images/star.svg" alt="">
+                        <img src="/src/images/star.svg" alt="">
+                        <img src="/src/images/star.svg" alt="">
+                        <img src="/src/images/star.svg" alt="">
+                        <img src="/src/images/star.svg" alt="">
+                    </div>
+                </div>
+                <div class="booking__border"></div>
+                <div class="booking__facility">
+                    <h1 class="booking__subtitle">House Facility</h1>
+                    <div class="booking__group-container">
+                        <div class="booking__group">
+                            <svg>
+                                <use xlink:href="src/images/sprite.svg#icon-map-pin"></use>
+                            </svg>
+                            <p class="booking__location">France</p>
+                        </div>
+                        <div class="booking__group">
+                            <svg>
+                                <use xlink:href="src/images/sprite.svg#icon-profile-male"></use>
+                            </svg>
+                            <p class="booking__rooms">3 rooms</p>
+                        </div>
+                        <div class="booking__group">
+                            <svg>
+                                <use xlink:href="src/images/sprite.svg#icon-expand"></use>
+                            </svg>
+                            <p class="booking__land">180 m<sup>2</sup></p>
+                        </div>
+                        <div class="booking__group">
+                            <svg>
+                                <use xlink:href="src/images/sprite.svg#icon-key"></use>
+                            </svg>
+                            <p class="booking__price">$650,000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking__border"></div>
+                <div class="booking__realtor">
+                    <h1 class="booking__subtitle">Realtor</h1>
+                    <div class="booking__realtor-profile">
+                        <img src="/src/images/realtor-2.jpeg" alt="Realtor">
+                        <p>Anne Linn</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="booking__right">
+                <h1 class="booking__form-title">Booking Reservation</h1>
+                <form class="booking__form">
+                    <div class="mb-3 booking__form-group">
+                        <label for="booker" class="form-label">Name</label>
+                        <input type="text" class="form-control booking__booker" id="booker" placeholder="Input your name" required>
+                      </div>
+                    <div class="mb-3 booking__form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control booking__email" id="email" placeholder="Input your email" required>
+                    </div>
+                    <div class="mb-3 booking__form-group">
+                        <label for="date" class="form-label">Down Payment Plan</label>
+                        <input type="date" class="form-control booking__date" id="date" required>
+                    </div>
+                    <div class="booking__card-payment">
+                        <img src="/src/images/visa.png" alt="">
+                        <img src="/src/images/mastercard.png" alt="">
+                        <img src="/src/images/amex.png" alt="">
+                    </div>
+                    <div class="mb-3 booking__form-group">
+                        <label for="credit" class="form-label">Card Number</label>
+                        <input type="number" class="form-control booking__credit" id="credit" min="0" placeholder="Input your credit card number" required>
+                    </div>
+                    <div class="booking__credit-card">
+                        <div class="mb-3 booking__form-group">
+                            <label for="expire" class="form-label">Expire Date</label>
+                            <input type="date" class="form-control booking__expire" id="expire" required>
+                        </div>
+                        <div class="mb-3 booking__form-group">
+                            <label for="cvv" class="form-label">CVV</label>
+                            <input type="number" class="form-control booking__cvv" id="cvv" min="0" maxlength="3" onKeyPress="if(this.value.length == 3 ) return false;" placeholder="***" required>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary booking__btn">Booking Now</button>
+                    <!-- <p class="booking__redirect">Don't have an account? <a href="/register.html">Sign up</a></p> -->
+                </form>
+            </div>
+        </div>
+        <footer class="footer__booking">
+            <ul class="footer__booking-nav">
+              <li class="footer__booking-item"><a href="#" class="footer__booking-link"><span>Find your</span> dream home</a></li>
+              <li class="footer__booking-item"><a href="#" class="footer__booking-link"><span>Request</span> proposal</a></li>
+              <li class="footer__booking-item"><a href="#" class="footer__booking-link"><span>Download</span> home planner</a></li>
+              <li class="footer__booking-item"><a href="#" class="footer__booking-link"><span>Contact</span> us</a></li>
+              <li class="footer__booking-item"><a href="#" class="footer__booking-link"><span>Submit</span> your property</a></li>
+              <li class="footer__booking-item"><a href="#" class="footer__booking-link"><span>Come work</span> with us!</a></li>
+            </ul>
+            <p class="copyright">&copy; Copyright <span class="copyrightYear"></span> by Nexter. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script src="topbar.js"></script>
+    <script src="booking.js"></script>
+    <script src="index.js" charset="utf-8"></script>
+</body>
+</html>

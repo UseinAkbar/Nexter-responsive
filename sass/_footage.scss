@@ -1,0 +1,29 @@
+.footage {
+    grid-column: center-start / center-end;
+    grid-row: 7/8;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    grid-gap: 3rem;
+    align-items: center;
+    
+    &__title {
+        font-family: $font-display;
+        font-weight: 600;
+        font-size: 6rem;
+        letter-spacing: 3px;
+        color: #c69963;
+        text-transform: capitalize;
+        text-align: center;
+    }
+    
+    &__video {
+        width: 100%;
+        
+        video {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+    }
+}

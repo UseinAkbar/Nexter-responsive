@@ -63,6 +63,7 @@
   font-weight: 400;
   text-transform: uppercase;
   padding: 1.8rem 3rem;
+  border: none;
   cursor: pointer;
   box-shadow: 1px 1.5px .2rem $color-grey-light-2;
   border-radius: .5rem;
@@ -72,6 +73,7 @@
 
   &:hover {
     background-color: $color-primary-dark;
+    color: #fff;
   }
 
   @media only screen and (max-width: $bp-small) and (hover: none) {
@@ -83,5 +85,7 @@
 
   &:active {
     transform: scale(.95);
+    background-color: $color-primary-dark !important;
+    color: #fff !important;
   }
 }

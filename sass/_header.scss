@@ -39,6 +39,7 @@
 
     &:active {
       transform: translateY(-1rem) scale(.95);
+      background-color: $color-primary-dark;
     }
   }
 }

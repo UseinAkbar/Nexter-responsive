@@ -1,0 +1,114 @@
+.topbar {
+
+    &__logged {
+        display: grid;
+        grid-template-columns: min-content max-content;
+        grid-auto-rows: 1fr;
+        grid-gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        padding: 0 2rem;
+        position: relative;
+        color: $color-grey-light-1;
+        cursor: pointer;
+        transition: .1s ease;
+
+        &:hover {
+            .topbar__user {
+                color: $color-grey-light-1;
+            }
+        }
+
+        &:active {
+            transform: scale(1);
+        }
+
+        img {
+            width: 1.6rem;
+        }
+    }
+
+    &__user {
+        font-size: 1.4rem;
+        font-weight: 400;
+        font-family: $font-display;
+        color: #c69963;
+        text-transform: uppercase;
+        transform: translateY(2px);
+        transition: .1s ease;
+    }
+
+    &__option {
+        position: absolute;
+        width: 80%;
+        top: 100%;
+        left: 0;
+        padding: 1rem 0;
+        background-color: $color-secondary;
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0 .4rem 1rem rgba($color-grey-dark-1, .2);
+        transition: .3s ease;
+
+        ul li:hover {
+            color: $color-grey-light-1;
+            background-color: #c69963;
+        }
+    }
+
+    &__dropdown {
+        height: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        grid-gap: 1.5rem;
+        padding-left: 0;
+        overflow: hidden;
+        transition: .3s ease;
+
+        li {
+            list-style: none;
+            padding: 1rem 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 400;
+            font-family: $font-display;
+            color: #c69963;
+            transition: .1s ease;
+
+            &:hover {
+                color: $color-grey-light-1;
+                background-color: #c69963;
+            }
+        }
+    }
+
+    &__role {
+        text-decoration: none;
+        padding: 1rem 1.5rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+        font-family: $font-display;
+        color: #c69963;
+        transition: .1s ease;
+
+            &:hover {
+                color: $color-grey-light-1;
+                background-color: #c69963;
+            }
+    }
+}
+
+.topbar__logged.clicked {
+    background-color: #c69963;
+}
+
+.topbar__logged.clicked .topbar__user {
+    color: $color-grey-light-1;
+}
+
+.topbar__dropdown.drop {
+    height: 15.8rem;
+}
+
+.topbar__option.drop {
+    padding: 0;
+}

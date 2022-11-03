@@ -1,13 +1,13 @@
 .topbar {
   background-color: $color-secondary;
-  grid-column: full-start / full-end;
-  grid-row: 1 / 2;
+  // grid-column: full-start / full-end;
+  // grid-row: 1 / 2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  position: fixed;
-  left: 0;
-  right: 0;
+  position: sticky;
+  top: 0;
+  width: 100vw;
   height: 6rem;
   z-index: 5;
   box-shadow: 0 .1rem .2rem #000;
@@ -139,6 +139,17 @@
     }
   }
 
+  .topbar__login .topbar__link {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-gap: 1rem;
+    justify-content: center;
+
+    .topbar__icon--login {
+      align-self: center;
+    }
+  }
+
   &__icon {
     width: 1.8rem;
     height: 1.8rem;
@@ -173,7 +184,6 @@
     grid-gap: 1.5px;
 
     p {
-      align-self: start;
       transition: .2s ease-out;
     }
   }
